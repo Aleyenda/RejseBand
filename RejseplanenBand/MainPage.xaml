@@ -1,0 +1,14 @@
+﻿<Page
+    x:Class="RejseplanenBand.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RejseplanenBand"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Name="MainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="120,10,98,0" TextWrapping="Wrap" Text="REJSEBAND" VerticalAlignment="Top" Height="37" Width="142" FontWeight="Bold" FontSize="24" FontFamily="Cooper Black"/>
+        <!--> <AutoSuggestBox x:Name="StationBox" PlaceholderText="Name of the station" QueryIcon="Find" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Width="231" RenderTransformOrigin="0.5,0.5" TextChanged="AutoSuggestBox_StationNameChanged" QuerySubmitted="AutoSuggestBox_StationNameSubmitted" SuggestionChosen="AutoSuggestBox_StationNameChosen"/> </-->
+    </Grid>
+</Page>
