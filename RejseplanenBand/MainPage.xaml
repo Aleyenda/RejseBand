@@ -7,8 +7,21 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Name="MainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="120,10,98,0" TextWrapping="Wrap" Text="REJSEBAND" VerticalAlignment="Top" Height="37" Width="142" FontWeight="Bold" FontSize="24" FontFamily="Cooper Black"/>
-        <!--> <AutoSuggestBox x:Name="StationBox" PlaceholderText="Name of the station" QueryIcon="Find" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Width="231" RenderTransformOrigin="0.5,0.5" TextChanged="AutoSuggestBox_StationNameChanged" QuerySubmitted="AutoSuggestBox_StationNameSubmitted" SuggestionChosen="AutoSuggestBox_StationNameChosen"/> </-->
-    </Grid>
+    <ScrollViewer>
+        <StackPanel Name="MainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="30" TextWrapping="WrapWholeWords" Text="REJSEBAND" FontWeight="Bold" FontSize="24" FontFamily="Cooper Black"/>
+            <TextBlock x:Name="SelectedStation1" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Padding="5" Text="Selected station 1" FontWeight="Bold" FontSize="16" FontFamily="Century Gothic"/>
+            <AutoSuggestBox x:Name="StationBox1" PlaceholderText="Name of the station" QueryIcon="Find" Width="250" TextChanged="StationsBox_TextChanged" SuggestionChosen="StationsBox_SuggestionChosen" QuerySubmitted="StationsBox_QuerySubmitted"/>
+            <TextBlock x:Name="SelectedStation2" Visibility="Collapsed" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Margin="0, 20, 0, 0" Padding="5" Text="Selected station 2" FontWeight="Bold" FontSize="16" FontFamily="Century Gothic"/>
+            <AutoSuggestBox x:Name="StationBox2" Visibility="Collapsed" PlaceholderText="Name of the station" QueryIcon="Find" Width="250" TextChanged="StationsBox_TextChanged" SuggestionChosen="StationsBox_SuggestionChosen" QuerySubmitted="StationsBox_QuerySubmitted"/>
+            <TextBlock x:Name="SelectedStation3" Visibility="Collapsed" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Margin="0, 20, 0, 0" Padding="5" Text="Selected station 3" FontWeight="Bold" FontSize="16" FontFamily="Century Gothic"/>
+            <AutoSuggestBox x:Name="StationBox3" Visibility="Collapsed" PlaceholderText="Name of the station" QueryIcon="Find" Width="250" TextChanged="StationsBox_TextChanged" SuggestionChosen="StationsBox_SuggestionChosen" QuerySubmitted="StationsBox_QuerySubmitted"/>
+            <TextBlock x:Name="SelectedStation4" Visibility="Collapsed" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Margin="0, 20, 0, 0" Padding="5" Text="Selected station 4" FontWeight="Bold" FontSize="16" FontFamily="Century Gothic"/>
+            <AutoSuggestBox x:Name="StationBox4" Visibility="Collapsed" PlaceholderText="Name of the station" QueryIcon="Find" Width="250" TextChanged="StationsBox_TextChanged" SuggestionChosen="StationsBox_SuggestionChosen" QuerySubmitted="StationsBox_QuerySubmitted"/>
+            <TextBlock x:Name="SelectedStation5" Visibility="Collapsed" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Margin="0, 20, 0, 0" Padding="5" Text="Selected station 5" FontWeight="Bold" FontSize="16" FontFamily="Century Gothic"/>
+            <AutoSuggestBox x:Name="StationBox5" Visibility="Collapsed" PlaceholderText="Name of the station" QueryIcon="Find" Width="250" TextChanged="StationsBox_TextChanged" SuggestionChosen="StationsBox_SuggestionChosen" QuerySubmitted="StationsBox_QuerySubmitted"/>
+            <Button x:Name="AddButton"    HorizontalAlignment="Stretch" Margin="100, 20, 100, 0" Content="Add" Click="AddButton_Click" />
+            <Button x:Name="RemoveButton" IsEnabled="False" HorizontalAlignment="Stretch" Margin="100, 10" Content="Remove" Click="RemoveButton_Click" />
+        </StackPanel>
+    </ScrollViewer>
 </Page>
