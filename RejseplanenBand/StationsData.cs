@@ -13,7 +13,7 @@ namespace RejseplanenBand
         {
             Add("Charlotenlund St");
             Add("Lyngby St");
-            Add("Nørreport St");
+            Add("Norreport St");
         }
     }
 }
