@@ -42,8 +42,10 @@
             <TextBlock x:Name="SelectedStation5" Text="Selected station 5" Style="{StaticResource SelectedStationTitles}" Visibility="Collapsed" />
             <AutoSuggestBox x:Name="StationBox5" Style="{StaticResource SelectedStationSuggestionBox}" Visibility="Collapsed" TextChanged="StationsBox_TextChanged" SuggestionChosen="StationsBox_SuggestionChosen" QuerySubmitted="StationsBox_QuerySubmitted"/>
             
-            <Button x:Name="AddButton" HorizontalAlignment="Stretch" Margin="100, 20, 100, 0" Content="Add" Click="AddButton_Click" />
-            <Button x:Name="RemoveButton" IsEnabled="False" HorizontalAlignment="Stretch" Margin="100, 10" Content="Remove" Click="RemoveButton_Click" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
+                <AppBarButton x:Name="RemoveButton" IsEnabled="False" Icon="Remove" Click="RemoveButton_Click"/>
+                <AppBarButton x:Name="AddButton" Icon="Add" Click="AddButton_Click"/>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </Page>

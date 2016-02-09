@@ -70,21 +70,16 @@ namespace RejseplanenBand
             this.enableDisableButtons();
         }
 
-        private void StationsBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
-        {
-            throw new NotImplementedException();
-        }
-
         private void StationsBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void StationsBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
             if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
             {
-                sender.ItemsSource = (sender.Text.Length > 1) ?
+                sender.ItemsSource = (sender.Text.Length > 0) ?
                     stationsData.Where(x => x.StartsWith(sender.Text, StringComparison.OrdinalIgnoreCase)) :
                     new string[] { };
             }
